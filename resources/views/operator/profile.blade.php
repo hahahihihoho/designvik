@@ -12,8 +12,9 @@
 								<img src="http://www.soaptheme.net/html/travelo/images/shortcodes/team/david.png" class="img-circle" style="width: 50%;">
 								<p>Username <a href="setting"><i class="fa fa-gears"></i></a></p>
 								<i class="glyphicon glyphicon-ok-circle" style="color: rgb(255, 96, 0);font-size: 22px;"></i> <U>TERVERIFIKASI</U></p>
-								<button type="button" class="btn btn-success widthfull noborder top4p"><i class="glyphicon glyphicon-plus"></i> Follow</button>
-								<button type="button" class="btn btn-default widthfull noborder top4p"><i class="glyphicon glyphicon-envelope"></i> Kirim Pesan</button>
+								<button type="button" class="btn btn-success btn-raised btn-block top4p"><i class="glyphicon glyphicon-plus"></i> Follow</button>
+
+								<button type="button" class="btn btn-default btn-raised btn-block top4p"><i class="glyphicon glyphicon-envelope"></i> Kirim Pesan</button>
 							</div>
 						</div>
 					</div>

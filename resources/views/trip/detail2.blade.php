@@ -19,9 +19,9 @@
 				</div>
 
 				<div class="col-md-12 bg-white bottom4p">
-					<ul class="nav nav-tabs">
-					  <li class="active"><a data-toggle="tab" href="#home">Deskripsi</a></li>
-					  <li><a data-toggle="tab" href="#facility">Fasilitas</a></li>
+					<ul class="nav nav-pills nav-justified">
+					  <li class="active"><a data-toggle="tab" href="#home" >Deskripsi</a></li>
+					  <li><a data-toggle="tab" href="#facility" >Fasilitas</a></li>
 					  <li><a data-toggle="tab" href="#itin">Itinerary</a></li>
 					  <li><a data-toggle="tab" href="#rules">Aturan & Ketentuan</a></li>
 					  <li><a data-toggle="tab" href="#review">Review</a></li>
@@ -139,7 +139,7 @@
 			<div class="col-md-4 bottom2p">
 				<div class="col-md-12 bg-white">
 					<div class="content">
-						<button type="button" class="btn btn-lg btn-warning widthfull noborder top4p">Beli</button>
+						<button class="btn btn-raised btn-warning btn-lg btn-block top4p" type="button" data-toggle="modal" data-target="#beli-dialog">Beli</button>
 					</div>
 					<hr/>
 					<div class="content top4p">
@@ -185,8 +185,9 @@
 							<img src="http://www.soaptheme.net/html/travelo/images/shortcodes/team/david.png" class="img-circle" style="width: 50%;">
 							<p><a href="operator">Username</a></p>
 							<i class="glyphicon glyphicon-ok-circle" style="color: rgb(255, 96, 0);font-size: 22px;"></i> <U>TERVERIFIKASI</U></p>
-							<button type="button" class="btn btn-success widthfull noborder top4p"><i class="glyphicon glyphicon-plus"></i> Follow</button>
-							<button type="button" class="btn btn-default widthfull noborder top4p"><i class="glyphicon glyphicon-envelope"></i> Kirim Pesan</button>
+							<button type="button" class="btn btn-success btn-raised btn-block top4p"><i class="glyphicon glyphicon-plus"></i> Follow</button>
+
+							<button type="button" class="btn btn-default btn-raised btn-block top4p"><i class="glyphicon glyphicon-envelope"></i> Kirim Pesan</button>
 						</div>
 
 					</div>
@@ -245,4 +246,53 @@
 
 		</div>
 	</div>
+
+<div id="beli-dialog" class="modal fade" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        <h4 class="modal-title"><i class="fa fa-shopping-cart"></i> Beli - Trip To Sabang Island </h4>
+      </div>
+      <hr/>
+      <div class="modal-body">
+      	<div class="col-md-4">
+			<img src="http://www.soaptheme.net/html/travelo/images/cruise/gallery/7.jpg" style="width:100%;" />
+			<br>
+			<p>Sisa Kuota : 5 Orang</p>
+      	</div>
+      	<div class="col-md-8">
+	        <div class="col-md-12">
+                <div class="form-group label-floating">
+				  <label class="control-label" for="meetpoint"><i class="fa fa-map-pin"></i> Harga</label>
+				  <input class="form-control" id="meetpoint" type="text" value="2.000.000" required disabled />
+				</div>
+            </div>
+
+        	<div class="col-md-12">
+                <div class="form-group label-floating">
+				  <label class="control-label" for="jlhkuota"><i class="fa fa-group"></i> Jumlah Peserta</label>
+				  <input class="form-control" id="jlhkuota" type="number" required>
+				</div>
+            </div>
+            <div class="col-md-1">
+				<div class="checkbox">
+					<label>
+						<input type="checkbox" name="optionsCheckboxes" required>
+					</label>
+				</div>
+            </div>
+            <div class="col-md-10">
+				<h6>Saya telah membaca dan menyetujui Ketentuan Layanan</h6>
+            </div>
+        </div>
+      </div>
+      <hr/>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Batal</button>
+        <a href="beli"><button type="button" class="btn btn-warning">Beli</button></a>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection

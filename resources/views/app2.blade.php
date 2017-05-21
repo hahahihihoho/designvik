@@ -15,9 +15,12 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,80">
     <link rel="stylesheet" href="{{ asset('/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/custom2.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/bootstrap-material-design.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/css/ripples.min.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/rateYo/2.2.0/jquery.rateyo.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
     <link rel="stylesheet" href="//code.jquery.com/ui/1.11.2/themes/smoothness/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         body {
             font-family: 'Lato';
@@ -28,59 +31,57 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-default">
-      <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar navbar-default" style="background-color: #fff; color: #777;">
+      <div class="container">
         <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">Brand</a>
+          <a class="navbar-brand" href="javascript:void(0)">
+            <img alt="Dolan-Logo" src="/img/logo-vika.png" style="width: 120px; margin-top: -20%;">
+          </a>
         </div>
+        <div class="navbar-collapse collapse navbar-responsive-collapse">
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active"><a href="#">Link <span class="sr-only">(current)</span></a></li>
-            <li><a href="#">Link</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-          </ul>
           <form class="navbar-form navbar-left">
             <div class="form-group">
-              <input type="text" class="form-control" placeholder="Search">
+              <input class="form-control col-md-8" placeholder="Search" type="text"><button type="submit" style="background: none; border: none;"><i class="fa fa-search"></i></button>
             </div>
-            <button type="submit" class="btn btn-default">Submit</button>
           </form>
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Link</a></li>
+            <li>
+                <a href="bootstrap-elements.html"><i class="fa fa-bell"></i> <span class="label label-danger">3</span></a>
+            </li>
+            <li>
+                <a href="bootstrap-elements.html"><i class="fa fa-envelope"></i> <span class="label label-danger">3</span></a>
+            </li>
+            <li class="dropdown"><a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-home"></i> Trip Operator <span class="label label-danger">3</span> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                <li><a href="operator"><i class="fa fa-user"></i> Profile</a></li>
+                <li class="divider"></li>
+                <li><a href="create"><i class="fa fa-pencil"></i> Buat Trip</a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-shopping-cart"></i> Penjualan</a></li>
+                <li class="divider"></li>
+                <li><a href="setting"><i class="fa fa-gears"></i> Pengaturan</a></li>
+              </ul>
+            </li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+              <a href="bootstrap-elements.html" data-target="#" class="dropdown-toggle" data-toggle="dropdown" style="padding: 15px 0;"><img class="circle" src="http://lorempixel.com/56/56/people/1" alt="icon" style="border-radius: 100%; width: 35px;"> Username
+                <b class="caret"></b></a>
               <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li><a href="#">Separated link</a></li>
+                <li><a href="user"><i class="fa fa-user"></i> Profile</a></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-shopping-basket"></i> Pembelian</a></li>
+                <li><a href="user-setting"><i class="fa fa-gears"></i> Pengaturan</a></li>
+                <li class="divider"></li>
+                <li><a href="javascript:void(0)"><i class="fa fa-sign-out"></i> Keluar</a></li>
               </ul>
             </li>
           </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>  
+        </div>
+      </div>
+    </div> 
 
     
     @yield('content')
@@ -92,8 +93,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.0/jquery.mask.min.js"></script>
     <script src="//code.jquery.com/ui/1.11.2/jquery-ui.js"></script>
-    <script type="text/javascript">
+    <script src="{{ asset('/js/material.min.js') }}"></script>
+    <script src="{{ asset('/js/ripple.js') }}"></script>
+    
 
+    <script type="text/javascript">
+      $.material.init()
+      
       var dates = $("#datefrom, #dateto").datepicker({
           minDate: "0",
           maxDate: "+2Y",
@@ -199,8 +205,8 @@
                       $item = $(this);
 
               if (!$item.hasClass('disabled')) {
-                  navListItems.removeClass('btn-primary').addClass('btn-default');
-                  $item.addClass('btn-primary');
+                  navListItems.removeClass('btn-warning').addClass('btn-default');
+                  $item.addClass('btn-warning');
                   allWells.hide();
                   $target.show();
                   $target.find('input:eq(0)').focus();
@@ -234,7 +240,7 @@
                   nextStepWizard.removeAttr('disabled').trigger('click');
           });
 
-          $('div.setup-panel div a.btn-primary').trigger('click');
+          $('div.setup-panel div a.btn-circle').trigger('click');
         });
 
         $(function()

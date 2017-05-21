@@ -26,8 +26,12 @@ Route::get('/operator', function () {
     return view('operator.profile');
 });
 
-Route::get('/owner', function () {
-    return view('operator.owner');
+Route::get('/user', function () {
+    return view('user.profile-user');
+});
+
+Route::get('/user-setting', function () {
+    return view('user.setting-user');
 });
 
 Route::get('/setting', function () {
@@ -36,4 +40,12 @@ Route::get('/setting', function () {
 
 Route::get('/create', function () {
     return view('trip.create');
+});
+
+Route::get('/beli', function () {
+    return view('trip.beli');
+});
+
+Route::get('/finish-order', function () {
+    return view('trip.selesaibeli');
 });
